@@ -1,0 +1,4 @@
+id,name,category,subcategory,price,description,image_url,specifications,stock_status
+1,Example Product 1,Electronics,Smartphones,599.99,"A high-end smartphone with great features",images/products/phone1.jpg,"Screen: 6.5""|RAM: 8GB|Storage: 128GB",In Stock
+2,Example Product 2,Home & Garden,Furniture,299.99,"Comfortable modern chair",images/products/chair1.jpg,"Material: Oak|Dimensions: 60x80x90cm|Weight: 5kg",Available
+3,Example Product 3,Electronics,Laptops,1299.99,"Powerful laptop for professionals",images/products/laptop1.jpg,"CPU: Intel i7|RAM: 16GB|Storage: 512GB SSD",Pre-order

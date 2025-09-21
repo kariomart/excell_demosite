@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Product Catalog</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="/" class="logo">
+                <img src="/ExcellLogo/logo.png" alt="Excell Logo" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/products.html" class="nav-link active">Products</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="/careers.html" class="nav-link">Careers</a>
+            </div>
+        </nav>
+        <nav class="category-nav" id="category-nav">
+            <div class="category-links" id="category-links">
+                <!-- Category links will be inserted here -->
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="product-grid" id="product-grid"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Catalog. All rights reserved.</p>
+    </footer>
+
+    <!-- Product template -->
+    <template id="product-template">
+        <div class="product-card">
+            <img class="product-image" src="" alt="">
+            <div class="product-info">
+                <h3 class="product-name"></h3>
+                <p class="product-category"></p>
+                <p class="product-description"></p>
+                <div class="product-details">
+                    <p class="product-price"></p>
+                    <p class="product-status"></p>
+                </div>
+                <div class="product-specs"></div>
+            </div>
+        </div>
+    </template>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

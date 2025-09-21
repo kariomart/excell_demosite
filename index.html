@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Product Catalog</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .hero {
+            position: relative;
+            background: url('/balloon_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #000;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #fff;
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 2rem;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .featured-products {
+            padding: 4rem 0;
+        }
+
+        .featured-products h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-card h3 {
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="/" class="logo">
+                <img src="/ExcellLogo/logo.png" alt="Excell Logo" class="logo-image">
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/products.html" class="nav-link">Products</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="/careers.html" class="nav-link">Careers</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Our Product Catalog</h1>
+        <p>Discover our extensive collection of high-quality products designed to meet your needs.</p>
+        <a href="/products.html" class="cta-button">Browse Products</a>
+    </div>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Quality Products</h3>
+                <p>We source only the highest quality products from trusted manufacturers.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Expert Support</h3>
+                <p>Our team of experts is always ready to help you make the right choice.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Fast Shipping</h3>
+                <p>Quick and reliable shipping to get your products to you when you need them.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Satisfaction Guaranteed</h3>
+                <p>Your satisfaction is our top priority, backed by our guarantee.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="product-grid"></div>
+    </section>
+
+    <template id="product-template">
+        <div class="product-card">
+            <img class="product-image" src="" alt="">
+            <div class="product-info">
+                <h3 class="product-name"></h3>
+                <p class="product-category"></p>
+                <p class="product-description"></p>
+                <div class="product-details">
+                    <p class="product-price"></p>
+                    <p class="product-status"></p>
+                </div>
+                <div class="product-specs"></div>
+            </div>
+        </div>
+    </template>
+
+    <footer>
+        <p>&copy; 2025 Product Catalog. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
